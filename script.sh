@@ -13,6 +13,10 @@ echo "Configure /etc/login.defs.....3"
 read -p "Which command do you want to run? " command_value
 
 if [[ $command_value == 1 ]]; then
+  if ! dpkg -l | grep -q "ufw"; then
+    sudo apt-get install ufw
+    echo "ufw installed"
+  fi
   sudo ufw enable
   sudo ufw status
   echo "Firewall is enabled"
