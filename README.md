@@ -1,1 +1,1 @@
-This is a basic bash script
+This is a basic bash script (For CyberPatriot)
